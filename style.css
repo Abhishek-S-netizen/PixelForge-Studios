@@ -1,0 +1,212 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(15, 15, 15);
+    font-family: Sansation;
+}
+
+#navigation_bar {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(33, 37, 41, 0.8) !important;
+    backdrop-filter: blur(10px);
+
+    transition: width 0.5s ease, margin-top 0.5s ease, border-radius 0.5s ease;
+}
+
+#navigation_bar.shrink_navbar {
+    width: 80%;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+
+#navigation_bar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+#navigation_bar a:hover {
+    color: #FF0000;
+}
+
+.parallax {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+}
+
+.parallax::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+header img {
+    width: 100%;
+}
+
+#head {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_heading {
+    color: #FF0000;
+    margin-left: 3rem;
+}
+
+#about_us {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.cta_button {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    transition: color 0.5s ease;
+}
+
+#cta_button_text {
+    position: relative;
+    color: black;
+    transition: color 0.5s ease;
+}
+
+.cta_button::before {
+    position: absolute;
+    content: "";
+    z-index: 0;
+    top: 0;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FF0000;
+    transition: left 0.5s ease;
+}
+
+.cta_button:hover #cta_button_text {
+    color: white !important;
+}
+
+.cta_button:hover::before {
+    left: 0;
+}
+
+.overview_service_card:hover {
+    border: solid 0.5px #FF0000 !important;
+}
+
+#services {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.service_card {
+    overflow: hidden;
+    background-color: rgb(30, 30, 30);
+    width: 40%;
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+}
+
+.service_card.show_service_card {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.service_card img {
+    transition: transform 0.5s ease;
+}
+
+.service_card:hover {
+    transform: translateY(-20px);
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.7);
+}
+
+.service_card:hover img {
+    transform: scale(1.05);
+}
+
+#projects {
+    padding-bottom: 5rem;
+}
+
+.accordion_button_custom {
+    background-color: rgb(50, 50, 50) !important;
+    color: white !important;
+}
+
+.accordion_body_custom {
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+#testimonials {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.testimonial_card {
+    background-color: rgb(30, 30, 30);
+    height: auto;
+    padding: 5rem;
+    width: 70%;
+}
+
+#call_to_action {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.contact_card {
+    position: relative;
+    overflow: hidden;
+    border: solid 0.5px rgb(40, 40, 40);
+}
+
+.contact_card::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(40, 40, 40);
+    transition: left 0.5s ease;
+}
+
+.contact_card:hover::before {
+    left: 0;
+}
+
+.contact_card * {
+    position: relative;
+    z-index: 2;
+}
